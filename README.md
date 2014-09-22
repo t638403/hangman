@@ -24,12 +24,12 @@ Create engine and set a word to guess. Create UI and submit engine to it.
 
 ```javascript
 $(document).ready(function(){
-            var words = ['Lorem','ipsum','dolor','sit','amet,','consectetur','adipiscing','elit'];
+    var words = ['Lorem','ipsum','dolor','sit','amet,','consectetur','adipiscing','elit'];
 
-            var engine = hangman.engine();
-            engine.word(words[_.random(0,words.length)]);
+    var engine = hangman.engine();
+    engine.word(words[_.random(0,words.length)]);
 
-            var ui = hangman.ui(engine);
-            ui.init();
-        });
+    var ui = hangman.ui(engine);
+    ui.init();
+});
 ```
