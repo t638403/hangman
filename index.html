@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="ui.js"></script>
+    <script src="engine.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var words = ['Lorem','ipsum','dolor','sit','amet,','consectetur','adipiscing','elit'];
+
+            var engine = hangman.engine();
+            engine.word(words[_.random(0,words.length)]);
+
+            var ui = hangman.ui(engine);
+            ui.init();
+        });
+    </script>
+    <style type="text/css">
+        .stage-0 {
+            background-image: none;
+        }
+        .stage-1 {
+            background-image: url('images/1.jpg');
+        }
+        .stage-2 {
+            background-image: url('images/2.jpg');
+        }
+        .stage-3 {
+            background-image: url('images/3.jpg');
+        }
+        .stage-4 {
+            background-image: url('images/4.jpg');
+        }
+        .stage-5 {
+            background-image: url('images/5.jpg');
+        }
+        .stage-6 {
+            background-image: url('images/6.jpg');
+        }
+        .stage-7 {
+            background-image: url('images/7.jpg');
+        }
+        .stage-8{
+            background-image: url('images/game_over.jpg');
+        }
+        #image {
+            border: 1px solid gray;
+            width: 200px;
+            height: 200px;
+        }
+        #word {
+            overflow: auto;
+        }
+        .letter {
+            border-bottom: 1px solid gray;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            margin-top: 10px;
+            float: left;
+            font-size: 37px;
+        }
+        #letter-0 {
+            margin-left: 0px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size:30px;
+        }
+    </style>
+    <title>Hangman</title>
+</head>
+<body>
+<div id="image" class="stage-0"></div>
+<div id="word"></div>
+<div id="message"></div>
+</body>
+</html>
