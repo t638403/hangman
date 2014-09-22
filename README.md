@@ -18,7 +18,25 @@ Add dependencies to HTML file and add following divs to body of HTML doc.
 <div id="message"></div>
 
 ```
+Set images for every stage using css
+```css
+.stage-0 {
+    background-image: none;
+}
+.stage-1 {
+    background-image: url('images/1.jpg');
+}
 
+/* ... */
+
+}
+.stage-7 {
+    background-image: url('images/7.jpg');
+}
+.stage-8{
+    background-image: url('images/game_over.jpg');
+}
+```
 
 Create engine and set a word to guess. Create UI and submit engine to it.
 
